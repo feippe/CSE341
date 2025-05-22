@@ -1,0 +1,35 @@
+//LOCALHOST
+
+###GET ALL CONTACTS
+GET http://localhost:3000/contacts
+
+
+###GET A SINGLE CONTACT
+GET http://localhost:3000/contacts/6823eb675e5024b45f861e10
+
+###INSERT A NEW CONTACT
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName" : "John",
+    "lastName" : "Dare",
+    "email" : "john@dare.com",
+    "birthday" : "November 1",
+    "favoriteColor" : "Pink"
+}
+
+###UPDATE A CONTACT
+PUT http://localhost:3000/contacts/6823f5b75e5024b45f861e12 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName" : "Angela",
+    "lastName" : "Whitmer",
+    "email" : "john@dare.com",
+    "birthday" : "November 1",
+    "favoriteColor" : "Pink"
+}
+
+###DELETE A CONTACT
+DELETE http://localhost:3000/contacts/6823f5b75e5024b45f861e12
